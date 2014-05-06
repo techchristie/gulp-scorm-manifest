@@ -73,14 +73,8 @@ scorm_manifest: {
     moduleTitle: 'AU101',
     launchPage: 'launchpage.html',
     path: './'
-  },
-  files: [{
-        expand: true,   // required
-        cwd: './',      // start looking for files to list in the same dir as gulpfile
-        src: ['**/*.*'],  // file selector (this example includes subdirectories)
-        filter: 'isFile'  // required
-      }],
-},
+  }
+}
 ```
 
 ## Release History

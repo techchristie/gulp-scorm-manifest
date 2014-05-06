@@ -6,11 +6,11 @@ var fs = require('fs');
 var path = require('path');
 var through = require('through2');
 var xmlBuilder = require('xmlbuilder');
-var _ = require('lodash'),
+var _ = require('lodash');
 
 module.exports = function(options) {
 
-  _.extend({
+  _.extend(options, {
     version: '2004',
     courseId: 'CourseID',
     SCOtitle: 'SCO Title',
@@ -18,7 +18,7 @@ module.exports = function(options) {
     launchPage: 'index.html',
     path: 'data',
     fileName: 'imsmanifest.xml'
-  }, options);
+  });
 
   var firstFile;
 

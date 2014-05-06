@@ -1,0 +1,26 @@
+{
+  "name": "gulp-scorm-manifest",
+  "version": "0.0.0",
+  "description": "scorm manifest gulp task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techchristie/gulp-scorm-manifest"
+  },
+  "keywords": [
+    "scorm",
+    "manifest",
+    "gulp"
+  ],
+  "author": "Ryan Matsikas",
+  "license": "MIT",
+  "dependencies": {
+    "xmlbuilder": "^2.2.1",
+    "gulp-util": "^2.2.14",
+    "through2": "^0.4.1",
+    "lodash": "^2.4.1"
+  }
+}

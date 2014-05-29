@@ -30,7 +30,7 @@ module.exports = function(options) {
     fileArr: [
       {'@identifier':  'resource_1'},
       {'@type': 'webcontent'},
-      {'@href': options.launchPage}
+      {'@href': options.path+'/'+options.launchPage}
     ]
   };
 

@@ -10,7 +10,7 @@ var _ = require('lodash');
 
 module.exports = function(options) {
 
-  _.extend(options, {
+  _.extend({
     version: '2004',
     courseId: 'CourseID',
     SCOtitle: 'SCO Title',
@@ -18,7 +18,7 @@ module.exports = function(options) {
     launchPage: 'index.html',
     path: 'data',
     fileName: 'imsmanifest.xml'
-  });
+  }, options);
 
   var firstFile;
 

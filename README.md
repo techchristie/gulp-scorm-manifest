@@ -65,16 +65,22 @@ This example creates a SCORM 2004 3rd Edition IMS manifest. The manifest will be
 
 ```js
 // simple single SCO package
-scorm_manifest: {
-  options: {
-    version: '2004',
-    courseId: 'Gulp101',
-    SCOtitle: 'Intro to Gulp',
-    moduleTitle: 'AU101',
-    launchPage: 'launchpage.html',
-    path: './'
-  }
-}
+var gulp = require('gulp');
+var manifest = require('gulp-scorm-manifest');
+
+gulp.task('manifest', function() {
+    gulp.src('build/data/**')
+    .pipe(manifest({
+      version: '2004',
+      courseId: 'Gulp101',
+      SCOtitle: 'Intro Title',
+      moduleTitle: 'Module Title',
+      launchPage: 'index.html',
+      path: 'data',
+      fileName: 'imsmanifest.xml'
+    }))
+    .pipe(gulp.dest('dist'))
+});
 ```
 
 ## Release History

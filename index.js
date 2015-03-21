@@ -54,7 +54,7 @@ module.exports = function(options) {
   var addFile = function(file, lastmode, cb) {
     var fObj = {
       file: {
-        '@href':options.path+'/'+file.relative
+        '@href':options.path+'/'+file.relative.replace(/\\/g, '/')
       }
     };
     xmlTokens.fileArr.push(fObj);

@@ -1,6 +1,6 @@
 {
   "name": "gulp-scorm-manifest",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "scorm manifest gulp task",
   "main": "index.js",
   "scripts": {

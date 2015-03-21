@@ -30,7 +30,7 @@ module.exports = function(options) {
     fileArr: [
       {'@identifier':  'resource_1'},
       {'@type': 'webcontent'},
-      {'@href': options.path+'/'+options.launchPage}
+      {'@href': (options.path ? options.path + "/" : "").replace(/\\/g, '/') + options.launchPage}
     ]
   };
 
@@ -54,7 +54,7 @@ module.exports = function(options) {
   var addFile = function(file, lastmode, cb) {
     var fObj = {
       file: {
-        '@href':options.path+'/'+file.relative.replace(/\\/g, '/')
+        '@href':((options.path ? options.path + "/" : "") + file.relative).replace(/\\/g, '/')
       }
     };
     xmlTokens.fileArr.push(fObj);

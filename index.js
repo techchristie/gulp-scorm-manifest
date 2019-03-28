@@ -7,6 +7,7 @@ var path = require('path');
 var through = require('through2');
 var xmlBuilder = require('xmlbuilder');
 var _ = require('lodash');
+var Vinyl = require('vinyl');
 
 module.exports = function(options) {
 
@@ -143,7 +144,7 @@ module.exports = function(options) {
 
     var prettyXML = xmlDoc.end({pretty: true});
 
-    var manifestFile  = new gutil.File({
+    var manifestFile  = new Vinyl({
       cwd:firstFile.cwd,
       base: firstFile.base,
       path: path.join(firstFile.base, fileName),

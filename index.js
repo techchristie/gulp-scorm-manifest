@@ -13,6 +13,7 @@ module.exports = function(options) {
 
   _.extend({
     version: '2004',
+    edition: '3rd',
     courseId: 'CourseID',
     SCOtitle: 'SCO Title',
     moduleTitle: 'Module Title',
@@ -36,13 +37,14 @@ module.exports = function(options) {
   };
 
   var v = options.version.toLowerCase();
+  var ed = options.edition || '3rd';
 
   if (v==='1.2') {
     xmlTokens.versionString = '1.2';
     xmlTokens.scormType = 'adlcp:scormtype';
 
   } else if (v.indexOf('2004')===0) {
-    xmlTokens.versionString = '2004 3rd Edition';
+    xmlTokens.versionString = '2004 '+ed+' Edition';
     xmlTokens.scormType = 'adlcp:scormType';
   }
 

@@ -29,6 +29,13 @@ Possible values: `2004||1.2`
 
 This is used to define which version of SCORM will be applied to the manifest.
 
+#### options.edition (only for version 2004):
+Type: `String`
+Default value: `'3rd'`
+Possible values: `1st||2nd||3rd||4th`
+
+This is used to define which edition of SCORM 2004 will be applied to the manifest.
+
 #### options.courseId
 Type: `String`
 Default value: `'CourseID'`
